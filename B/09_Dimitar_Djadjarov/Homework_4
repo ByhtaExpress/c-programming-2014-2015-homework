@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main(){
+	unsigned long long int
+	n,d,i,z,o,e,g,c,h;
+	z=0;
+	h=0;
+	i=1;
+	o=123456;
+	e=341244;
+	g=513412;
+	c=225215;
+	g=486423;
+	do{
+		z=0;
+		h=h+1;
+		switch(h){
+			case 1: n=o;
+			break;
+			case 2: n=e;
+			break;
+			case 3: n=g;
+			break;
+			case 4: n=c;
+			break;
+			case 5: n=g;
+			break;
+		}d=n;
+		do { 
+			z=z*10 + n%10;
+			n=n/10;
+		} while (n!=0);
+		printf("%llu - %llu ",d,z);
+		printf("\n");
+	}while(h<5);
+return 0;
+}
