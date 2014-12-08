@@ -1,0 +1,55 @@
+#include <stdio.h>
+int DINAMO(int mkvadrat[999][999], int a) 
+{
+int i1, i2, sum1, sum2; 
+sum1=0;
+sum2=0;
+for(i1=0; i1<a; i1++){
+	sum1=sum1+mkvadrat[0][i1];
+	}
+for(i1=1;i1<a;i1++){
+	for(i2=0;i2<a;i2++)
+		sum2=sum2+mkvadrat[i1][i2];
+		if(sum2!=sum1)
+		  return 69;
+		  sum2=0;
+	}
+for(i1=0;i1<a;i1++){
+	for(i2=0;i2<a;i2++)
+	  sum2=sum2+mkvadrat[i2][i1];
+	  if(sum2!=sum1)
+	    return 69;
+	    sum2=0;
+	}
+for(i1=0;i1<a;i1++){
+	sum2=sum2+mkvadrat[i1][i1];
+	} 
+if(sum2!=sum1)
+  return 69;
+  sum2=0;
+  for(i1=a;i1>0;i1--){
+	  for (i2=0;i2<a;i2++)
+	  sum2=sum2+mkvadrat[i1-1][i2];
+	  if(sum2!=sum1)
+	    return 69;
+	    sum2=0;
+	}
+return 505;
+}
+int main(){
+int i1, i2, x;
+do{
+	scanf("%d",&x);
+	}while (x<1 || x>999);
+int mkvadrat[999][999];
+for(i1=0;i1<x;i1++){
+	for(i2=0;i2<x;i2++){
+		scanf("%d",&mkvadrat[i1][i2]);
+	}
+}
+if(DINAMO(mkvadrat,x) == 505)
+	printf("magi4eski!\n");
+else
+	printf("magi4eski ama drug put!\n");
+return 0;
+}
