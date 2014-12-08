@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main(){
+	int a,i,weight=1;
+	float vectorx,vectory;
+	float kordinati1[999],kordinati2[999];
+		printf("Nacepinec sutrin: ");
+		scanf("%d\n",&a);
+		scanf("%f %f",&vectorx,&vectory);
+		for(i=0;i<a;i++){
+			scanf("%f %f",&kordinati1[i],&kordinati2[i]);
+		}
+		for(i=0;i<a; i++){
+  		float f_vector=kordinati1[i]-vectorx;
+			float s_vector=kordinati2[i]-vectory;
+			f_vector=f_vector+(f_vector/weight);
+			s_vector=s_vector+(s_vector/weight);
+			printf("%.2f %.2f\n",f_vector,s_vector);
+			vectorx=vectorx+f_vector;
+			vectory=vectory+s_vector;
+			weight=weight*2;
+		}
+	printf("%.2f %.2f\n", x_vector, y_vector);
+	return 0;
+}
