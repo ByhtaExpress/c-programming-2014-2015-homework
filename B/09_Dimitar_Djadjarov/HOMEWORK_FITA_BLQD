@@ -1,0 +1,115 @@
+#include <stdio.h>
+#include <string.h>
+
+int na4alsimvol(char string[]);
+int kub4eta(char string[]);
+int kudravelki(char string[]);
+int nolife(char string[]);
+int main(){
+
+    char SUKABLQD[200];
+    int ino,dve,tri,chetverg;
+    printf("Иху мад блять?\n");
+    scanf("%s", SUKABLQD);
+
+
+
+    ino = na4alsimvol(SUKABLQD);
+    if (ino == -1){
+        printf("NO MY FREND NO!\n");
+        }
+    else{
+        dve = kudravelki(SUKABLQD);
+        if (dve == -1){
+            printf("NO MY FREND NO!\n");
+        }
+        else{
+            tri = kub4eta(SUKABLQD);
+            if (tri == -1){
+                printf("NO MY FREND NO!\n");
+            }
+            else{
+                chetverg = nolife(SUKABLQD);
+                if (chetverg == -1){
+                    printf("NO MY FREND NO!\n");
+                }
+                else{
+                    printf("FITAAAAAAAAAAAAAAAAAAAAAA!\n");
+                }
+            }
+        }
+
+    }
+
+    return 0;
+}
+
+
+int na4alsimvol(char LADA[]){
+    int PIDAR;
+    if(LADA[0]=='}' || LADA[0]==']' || LADA[0]==')'){
+        PIDAR=-1;
+    }
+    return PIDAR;
+
+}
+int kub4eta(char MADAFUKI[]){
+    int PIDAR,length,count,open,close;
+    lenght=strlen(MADAFUKI);
+    for(count=0; count <= lenght ;count++){
+        if(MADAFUKA[count]=='['){
+            open++;
+        }
+        if(MADAFUKI[count]==']'){
+            close++;
+        }
+    }
+    if(open = close){
+        PIDAR=0;
+    }
+    else{
+        PIDAR=-1;
+    }
+    return PIDAR;
+
+}
+int kudravelki(char JIGULA[]){
+    int SUCHKI,lenght,count,open,close;
+    lenght=strlen(JIGULA);
+    for(count=0;count<=lenght;count++){
+        if(JIGULA[count]=='{'){
+            open++;
+        }
+        if(JIGULA[count]=='}'){
+            close++;
+        }
+    }
+    if(open=close){
+        SUCHKI=0;
+    }
+    else{
+        SUCHKI=-1;
+    }
+    return SUCHKI;
+
+}
+
+int nolife(char SAD[]){
+    int CRYMEARIVER,lenght,count,open,close;
+    lenght=strlen(SAD);
+    for(count=0;count<=lenght;count++){
+        if(SAD[count]=='('){
+            open++;
+        }
+        if(SAD[count]==')'){
+            close++;
+        }
+    }
+    if(open=close){
+        CRYMEARIVER=0;
+    }
+    else{
+        CRYMEARIVER=-1;
+    }
+    return CRYMEARIVER;
+}
